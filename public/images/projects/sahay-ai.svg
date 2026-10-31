@@ -1,0 +1,8 @@
+<svg width="1200" height="780" viewBox="0 0 1200 780" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="780" fill="#102729"/><circle cx="170" cy="90" r="260" fill="#D6FF70" fill-opacity=".11"/>
+  <rect x="60" y="52" width="1080" height="676" rx="18" fill="#0B181B" stroke="#80C3A6" stroke-opacity=".2"/><rect x="88" y="82" width="235" height="610" rx="11" fill="#142D2D"/>
+  <rect x="350" y="82" width="485" height="610" rx="11" fill="#102222"/><rect x="861" y="82" width="240" height="610" rx="11" fill="#142D2D"/>
+  <text x="120" y="145" fill="#D6FF70" font-family="monospace" font-size="18">SAHAY_AI</text><text x="380" y="145" fill="#F4F6FC" font-family="sans-serif" font-size="24" font-weight="700">Conversation</text>
+  <rect x="387" y="200" width="270" height="74" rx="13" fill="#1B4641"/><rect x="512" y="300" width="270" height="74" rx="13" fill="#25353A"/><rect x="387" y="400" width="310" height="100" rx="13" fill="#1B4641"/>
+  <circle cx="922" cy="155" r="32" fill="#D6FF70" fill-opacity=".2"/><path d="M915 155h15M922 148v15" stroke="#D6FF70" stroke-width="2"/>
+</svg>

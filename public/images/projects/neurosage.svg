@@ -1,0 +1,5 @@
+<svg width="1200" height="780" viewBox="0 0 1200 780" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="780" fill="#E9E7F1"/><circle cx="990" cy="120" r="270" fill="#A69BE5" fill-opacity=".3"/><circle cx="180" cy="700" r="240" fill="#B8DD55" fill-opacity=".2"/>
+  <rect x="70" y="65" width="1060" height="650" rx="28" fill="#FAF9FC" fill-opacity=".9"/><rect x="115" y="120" width="430" height="510" rx="20" fill="#E8E4F4"/><rect x="595" y="120" width="490" height="88" rx="14" fill="#E8E4F4"/><rect x="595" y="240" width="490" height="390" rx="14" fill="#E8E4F4"/>
+  <text x="165" y="235" fill="#393252" font-family="sans-serif" font-size="31" font-weight="700">NeuroSage</text><text x="165" y="275" fill="#6D6687" font-family="sans-serif" font-size="15">A little more aware, together.</text><circle cx="330" cy="430" r="100" stroke="#8E82CD" stroke-width="3" stroke-dasharray="7 12"/>
+</svg>

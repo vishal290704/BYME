@@ -1,0 +1,6 @@
+<svg width="1200" height="780" viewBox="0 0 1200 780" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="780" fill="#1A1730"/><rect x="58" y="50" width="1084" height="680" rx="22" fill="#282247"/><rect x="88" y="82" width="215" height="618" rx="12" fill="#211D3A"/><rect x="338" y="82" width="764" height="105" rx="12" fill="#362D5C"/>
+  <rect x="338" y="215" width="764" height="235" rx="12" fill="#362D5C"/><rect x="338" y="480" width="365" height="220" rx="12" fill="#362D5C"/><rect x="736" y="480" width="366" height="220" rx="12" fill="#362D5C"/>
+  <text x="118" y="145" fill="#D6FF70" font-family="sans-serif" font-weight="700" font-size="24">DES / ERP</text><text x="375" y="145" fill="#F4F6FC" font-family="sans-serif" font-size="27" font-weight="700">School at a glance</text>
+  <path d="M390 390H1040M390 350H1000M390 310H920" stroke="#D6FF70" stroke-opacity=".55" stroke-width="10"/>
+</svg>

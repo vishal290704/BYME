@@ -1,0 +1,9 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="1100" fill="#141E31"/>
+  <circle cx="650" cy="210" r="220" fill="#8294FF" fill-opacity=".12"/>
+  <path d="M-50 910C190 690 430 710 950 390V1150H-50V910Z" fill="#D6FF70" fill-opacity=".1"/>
+  <path d="M150 0V1100M300 0V1100M450 0V1100M600 0V1100M750 0V1100M0 180H900M0 360H900M0 540H900M0 720H900M0 900H900" stroke="#A5AEC0" stroke-opacity=".08"/>
+  <circle cx="450" cy="415" r="142" fill="#A5AEC0" fill-opacity=".14"/>
+  <path d="M204 1000C217 796 303 682 450 682C597 682 683 796 696 1000" fill="#A5AEC0" fill-opacity=".14"/>
+  <text x="450" y="1030" fill="#F4F6FC" fill-opacity=".75" font-family="monospace" font-size="18" text-anchor="middle" letter-spacing="4">PORTRAIT / REPLACE ME</text>
+</svg>

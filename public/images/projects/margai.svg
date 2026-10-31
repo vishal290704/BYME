@@ -1,0 +1,8 @@
+<svg width="1200" height="780" viewBox="0 0 1200 780" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="780" rx="4" fill="#151B36"/><circle cx="1030" cy="50" r="260" fill="#8294FF" fill-opacity=".18"/>
+  <rect x="58" y="48" width="1084" height="684" rx="20" fill="#0B1020"/><rect x="84" y="77" width="230" height="630" rx="12" fill="#171F37"/><rect x="345" y="77" width="765" height="106" rx="12" fill="#1C2743"/>
+  <rect x="345" y="211" width="370" height="220" rx="12" fill="#1C2743"/><rect x="737" y="211" width="373" height="220" rx="12" fill="#1C2743"/><rect x="345" y="460" width="765" height="247" rx="12" fill="#1C2743"/>
+  <text x="110" y="140" fill="#F4F6FC" font-family="sans-serif" font-weight="700" font-size="27">MargAI</text><text x="110" y="194" fill="#8294FF" font-family="monospace" font-size="13">CAREER OS</text>
+  <text x="380" y="130" fill="#F4F6FC" font-family="sans-serif" font-weight="700" font-size="26">Good morning, Vishal</text><text x="380" y="160" fill="#A5AEC0" font-family="sans-serif" font-size="14">Your next opportunity starts here.</text>
+  <path d="M390 372C440 330 480 346 530 300C570 264 620 309 675 250" stroke="#D6FF70" stroke-width="5"/><circle cx="675" cy="250" r="7" fill="#D6FF70"/>
+</svg>
