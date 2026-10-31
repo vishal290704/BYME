@@ -1,16 +1,139 @@
 import Link from "next/link";
-import { ArrowDownRight, ArrowUpRight, MoveDown } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 import { Reveal } from "@/components/reveal";
 import { ProjectArt } from "@/components/project-art";
 
 export default function Home() {
   const featured = portfolio.projects.slice(0, 3);
-  return <main>
-    <section className="hero"><div className="hero-rings"/><div className="shell hero-poster"><div className="hero-meta"><span>01 / Digital identity</span><span>India · 2026</span></div><Reveal className="hero-type"><div className="hero-kicker">Computer Science Engineer<br/>Full-Stack Developer · AI Product Builder</div><h1><span>Think.</span><span className="outline-type">Build.</span><span>Make it <i>real.</i></span></h1><div className="hero-note">I build useful digital products at the intersection of reliable systems, expressive interfaces, and intelligent software.</div></Reveal><Reveal className="portrait-stage" delay={.18}><span className="portrait-tag">VISHAL / BUILDER / EXPLORER</span><img className="portrait" src={portfolio.profile.image} alt={`${portfolio.profile.name} portrait placeholder`}/><span className="portrait-stamp">VS<br/><small>STUDIO<br/>01</small></span></Reveal><div className="hero-actions"><Link className="button" href="/projects">Explore projects <ArrowDownRight size={15}/></Link><Link className="text-link" href="/contact">Let&apos;s connect <ArrowUpRight size={15}/></Link></div><div className="scroll-cue"><MoveDown size={14}/> Scroll to explore</div></div></section>
-    <div className="marquee"><span>ENGINEERING <b>×</b> IMAGINATION <b>×</b> PRODUCTS WITH PURPOSE <b>×</b> GENERATIVE AI <b>×</b> </span></div>
-    <section className="section selected-work"><div className="shell"><div className="section-head"><div><div className="eyebrow">02 / Selected work</div><h2>Made to be<br/><i>used.</i></h2></div><p>Products, experiments, and digital experiences built through curiosity, engineering, and imagination.</p></div><div>{featured.map((project, index) => <Reveal className={`featured-project editorial-project project-${index + 1}`} key={project.slug} delay={index * .08}><ProjectArt src={project.image} title={project.title}/><div><span className="project-index">0{index + 1} / {project.category}</span><h3 className="project-title"><Link href={`/projects/${project.slug}`}>{project.title}</Link></h3><p className="project-desc">{project.description}</p><div className="tags">{project.technologies.slice(0,4).map((tag) => <span className="tag" key={tag}>{tag}</span>)}</div><Link className="text-link" href={`/projects/${project.slug}`}>View case study <ArrowUpRight size={15}/></Link></div></Reveal>)}</div><Link className="button cobalt-button" href="/projects">Enter the full exhibition <ArrowUpRight size={15}/></Link></div></section>
-    <section className="section about-strip"><div className="shell"><div className="eyebrow">03 / A little context</div><div className="about-statement"><h2>Software can be<br/><span>precise</span> and <i>alive.</i></h2><div><p>{portfolio.profile.intro} I move between product thinking, backend systems, and expressive frontend work to make ideas feel real.</p><Link className="text-link" href="/about">Read the story <ArrowUpRight size={15}/></Link></div></div></div></section>
-    <section className="contact-invite"><div className="shell"><div className="eyebrow">04 / Next move</div><h2>Have an idea?<br/><span>Let&apos;s make it matter.</span></h2><Link className="button" href="/contact">Start a conversation <ArrowUpRight size={15}/></Link></div></section>
-  </main>;
+  return (
+    <main>
+      <section className="hero">
+        <div className="shell hero-grid">
+          <Reveal className="hero-copy">
+            <div className="eyebrow">
+              FULL-STACK DEVELOPER / AI PRODUCT BUILDER
+            </div>
+            <p className="hero-greeting">Hello, I&apos;m</p>
+            <h1>{portfolio.profile.name}</h1>
+            <h2>Building useful software with code and AI.</h2>
+            <p className="hero-lead">
+              I&apos;m a Computer Science Engineering student passionate about
+              full-stack development, intelligent applications, and building
+              digital products that solve real-world problems.
+            </p>
+            <div className="hero-buttons">
+              <Link className="button" href="/projects">
+                Explore Projects <ArrowUpRight size={15} />
+              </Link>
+              <Link className="button outline" href="/contact">
+                Get In Touch <ArrowUpRight size={15} />
+              </Link>
+            </div>
+            <div className="social-row">
+              {portfolio.socials.map((social) => (
+                <a
+                  className="social-pill"
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={social.label}
+                >
+                  {social.label === "GitHub" ? (
+                    <Github size={15} />
+                  ) : (
+                    <Linkedin size={15} />
+                  )}{" "}
+                  {social.label}
+                </a>
+              ))}
+            </div>
+          </Reveal>
+          <Reveal className="portrait-stage" delay={0.15}>
+            <img
+              className="portrait"
+              src={portfolio.profile.image}
+              alt={`${portfolio.profile.name} portrait placeholder`}
+            />
+            <span className="portrait-caption">PORTRAIT / PLACEHOLDER</span>
+          </Reveal>
+        </div>
+        <div className="shell hero-meta">
+          <span>Based in India</span>
+          <span>B.Tech Computer Science Engineering</span>
+          <span>Interested in AI &amp; Backend Engineering</span>
+        </div>
+      </section>
+      <section className="section selected-work">
+        <div className="shell">
+          <div className="section-head">
+            <div>
+              <div className="eyebrow">01 / Selected projects</div>
+              <h2>Work I&apos;ve built.</h2>
+            </div>
+            <Link className="text-link" href="/projects">
+              View All Projects <ArrowUpRight size={15} />
+            </Link>
+          </div>
+          <div className="home-project-grid">
+            {featured.map((project, index) => (
+              <Reveal
+                className="home-project"
+                key={project.slug}
+                delay={index * 0.06}
+              >
+                <Link href={`/projects/${project.slug}`}>
+                  <ProjectArt src={project.image} title={project.title} />
+                  <div className="project-meta">
+                    <span className="mono">0{index + 1}</span>
+                    <span>{project.status}</span>
+                  </div>
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <div className="tags">
+                    {project.technologies.slice(0, 4).map((tag) => (
+                      <span className="tag" key={tag}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="section about-strip">
+        <div className="shell about-preview">
+          <div>
+            <div className="eyebrow">02 / About</div>
+            <h2>A little about what I build.</h2>
+          </div>
+          <div>
+            <p>
+              I&apos;m interested in building products that combine thoughtful
+              user experiences, reliable engineering, and practical AI
+              applications.
+            </p>
+            <Link className="text-link" href="/about">
+              More about me <ArrowUpRight size={15} />
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="contact-invite">
+        <div className="shell">
+          <div className="eyebrow">03 / Contact</div>
+          <h2>
+            Have an interesting idea?
+            <br />
+            Let&apos;s talk.
+          </h2>
+          <Link className="text-link" href="/contact">
+            Start a conversation <ArrowUpRight size={15} />
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
 }

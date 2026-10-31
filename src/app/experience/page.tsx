@@ -1,4 +1,54 @@
 import { portfolio } from "@/data/portfolio";
 import { Reveal } from "@/components/reveal";
 export const metadata = { title: "Experience" };
-export default function ExperiencePage() { return <main><section className="page-hero"><div className="shell"><div className="eyebrow">07 / Experience</div><h1>Where ideas<br/><span style={{color:"var(--lime)"}}>met reality.</span></h1><p>A growing record of the environments, workflows, and questions that have shaped how I build.</p></div></section><section className="section"><div className="shell"><div className="timeline">{portfolio.experience.map((item, index) => <Reveal className="timeline-item" key={`${item.company}-${index}`}><span className="timeline-date">{item.duration}</span><h2>{item.role}</h2><h4>{item.company} · {item.parentCompany}</h4><p>{item.summary}</p><ul className="highlight-list">{item.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}</ul><div className="tags">{item.technologies.map((technology) => <span className="tag" key={technology}>{technology}</span>)}</div></Reveal>)}</div></div></section></main>; }
+export default function ExperiencePage() {
+  return (
+    <main>
+      <section className="page-hero">
+        <div className="shell">
+          <div className="eyebrow">07 / Experience</div>
+          <h1>
+            Where ideas
+            <br />
+            <span style={{ color: "var(--lime)" }}>met reality.</span>
+          </h1>
+          <p>
+            A growing record of the environments, workflows, and questions that
+            have shaped how I build.
+          </p>
+        </div>
+      </section>
+      <section className="section">
+        <div className="shell">
+          <div className="timeline">
+            {portfolio.experience.map((item, index) => (
+              <Reveal
+                className="timeline-item"
+                key={`${item.company}-${index}`}
+              >
+                <span className="timeline-date">{item.duration}</span>
+                <h2>{item.role}</h2>
+                <h4>
+                  {item.company} · {item.parentCompany}
+                </h4>
+                <p>{item.summary}</p>
+                <ul className="highlight-list">
+                  {item.highlights.map((highlight) => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
+                <div className="tags">
+                  {item.technologies.map((technology) => (
+                    <span className="tag" key={technology}>
+                      {technology}
+                    </span>
+                  ))}
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
