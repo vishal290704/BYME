@@ -1,6 +1,6 @@
 "use client";
 import { FormEvent, useState } from "react";
-import { ArrowUpRight, Copy, Check } from "lucide-react";
+import { ArrowUpRight, Copy, Check, Phone } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 export default function ContactPage() {
   const [copied, setCopied] = useState(false);
@@ -102,6 +102,11 @@ export default function ContactPage() {
             ) : (
               <p>Email will be added soon.</p>
             )}
+            <a href={`tel:${portfolio.profile.phone}`}>
+              <Phone size={15} style={{ verticalAlign: "middle" }} />{" "}
+              {portfolio.profile.phone}
+              <ArrowUpRight size={15} style={{ float: "right" }} />
+            </a>
             {portfolio.socials.map((social) => (
               <a
                 href={social.href}

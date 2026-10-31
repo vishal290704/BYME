@@ -8,6 +8,10 @@ export function ProjectArt({ src, title }: { src: string; title: string }) {
         fill
         sizes="(max-width: 800px) 100vw, 60vw"
       />
+      <span className="project-art-shade" aria-hidden="true" />
+      <span className="project-art-action" aria-hidden="true">
+        View project <span>↗</span>
+      </span>
     </div>
   );
 }

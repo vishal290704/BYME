@@ -32,6 +32,10 @@ export default function About() {
               design, while generative AI keeps opening new questions about how
               software can become more responsive and capable.
             </p>
+            <p>
+              Born in {portfolio.profile.hometown}, I carry that sense of
+              place with me while building for a wider digital world.
+            </p>
             <div className="tags">
               {portfolio.interests.map((x) => (
                 <span className="tag" key={x}>
@@ -74,8 +78,18 @@ export default function About() {
                 <h4>{portfolio.education.detail}</h4>
                 <p>
                   {portfolio.education.location} · {portfolio.education.status}
+                  <br />
+                  {portfolio.education.result}
                 </p>
               </div>
+              {portfolio.academicHistory.map((school) => (
+                <div className="timeline-item" key={school.level}>
+                  <span className="timeline-date">{school.level}</span>
+                  <h2>{school.institution}</h2>
+                  <h4>{school.result}</h4>
+                  <p>{school.location}</p>
+                </div>
+              ))}
             </div>
           </Reveal>
         </div>

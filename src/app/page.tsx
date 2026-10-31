@@ -84,18 +84,17 @@ export default function Home() {
               >
                 <Link href={`/projects/${project.slug}`}>
                   <ProjectArt src={project.image} title={project.title} />
-                  <div className="project-meta">
-                    <span className="mono">0{index + 1}</span>
-                    <span>{project.status}</span>
-                  </div>
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                  <div className="tags">
-                    {project.technologies.slice(0, 4).map((tag) => (
-                      <span className="tag" key={tag}>
-                        {tag}
+                  <div className="home-project-info">
+                    <div className="project-meta">
+                      <span className="mono">0{index + 1}</span>
+                      <span>{project.status}</span>
+                    </div>
+                    <div className="home-project-heading">
+                      <h3>{project.title}</h3>
+                      <span className="home-project-link">
+                        View project <ArrowUpRight size={14} />
                       </span>
-                    ))}
+                    </div>
                   </div>
                 </Link>
               </Reveal>

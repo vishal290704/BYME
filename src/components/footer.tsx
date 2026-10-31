@@ -6,27 +6,38 @@ export function Footer() {
     <footer className="site-footer">
       <div className="shell">
         <div className="footer-top">
-          <div>
-            <div className="eyebrow">05 / The signature</div>
+          <div className="footer-intro">
+            <div className="eyebrow">Let&apos;s build something useful</div>
             <h2>
-              Crafted by
-              <br />
-              <span>{portfolio.profile.name.split(" ")[0]}.</span>
+              Say hello<span>.</span>
             </h2>
+            <a className="footer-email" href={`mailto:${portfolio.profile.email}`}>
+              {portfolio.profile.email} <ArrowUpRight size={14} />
+            </a>
           </div>
-          <div>
-            <div className="footer-links">
+          <div className="footer-navigation">
+            <div>
+              <div className="footer-label">Explore</div>
+              <nav className="footer-links" aria-label="Footer navigation">
               {portfolio.navigation.map((x) => (
                 <Link href={x.href} key={x.href}>
                   {x.label}
                 </Link>
               ))}
-              <a href={portfolio.profile.resume} download>
-                Resume
-              </a>
-              <a href="#top">Back to top ↑</a>
+              </nav>
             </div>
-            <p>Designed & Developed with curiosity and precision.</p>
+            <div>
+              <div className="footer-label">Elsewhere</div>
+              <div className="footer-links">
+                {portfolio.socials.map((social) => (
+                  <a href={social.href} target="_blank" rel="noreferrer" key={social.label}>
+                    {social.label}
+                  </a>
+                ))}
+                <a href={portfolio.profile.resume} download>Resume</a>
+                <a href="#top">Back to top ↑</a>
+              </div>
+            </div>
           </div>
         </div>
         <div className="footer-bottom">
@@ -34,14 +45,7 @@ export function Footer() {
             © {new Date().getFullYear()} {portfolio.profile.name}
           </span>
           <span>{portfolio.profile.positioning}</span>
-          {portfolio.profile.email ? (
-            <a href={`mailto:${portfolio.profile.email}`}>
-              {portfolio.profile.email}{" "}
-              <ArrowUpRight size={12} style={{ display: "inline" }} />
-            </a>
-          ) : (
-            <span>Email coming soon</span>
-          )}
+          <span>Designed &amp; developed with curiosity.</span>
         </div>
       </div>
     </footer>

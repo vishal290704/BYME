@@ -38,12 +38,22 @@ export default function ProjectDetail({
           </p>
           <div className="hero-buttons">
             {project.githubUrl ? (
-              <a className="button" href={project.githubUrl}>
+              <a
+                className="button"
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 GitHub <ArrowUpRight size={15} />
               </a>
             ) : null}
             {project.liveUrl ? (
-              <a className="button outline" href={project.liveUrl}>
+              <a
+                className="button outline"
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Live project <ArrowUpRight size={15} />
               </a>
             ) : null}
@@ -86,6 +96,29 @@ export default function ProjectDetail({
           </div>
         </div>
       </section>
+      {project.gallery?.length ? (
+        <section className="section">
+          <div className="shell">
+            <div className="section-head">
+              <div>
+                <div className="eyebrow">Project visual</div>
+                <h2>Inside the experience.</h2>
+              </div>
+            </div>
+            <div className="project-gallery">
+              {project.gallery.map((image, index) => (
+                <div className="project-gallery-item" key={image}>
+                  <img
+                    src={image}
+                    alt={`${project.title} screenshot ${index + 1}`}
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
       <section className="section">
         <div className="shell">
           <div className="section-head">
