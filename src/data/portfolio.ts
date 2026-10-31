@@ -274,9 +274,9 @@ export const portfolio = {
         "JWT Authentication",
         "Gemini API",
       ],
-      image: "/images/projects/pratham-ai.svg",
-      githubUrl: "",
-      liveUrl: "",
+      image: "/images/projects/pratham-ai/dashboard.png",
+      githubUrl: "https://github.com/vishal290704/Hospital-Management-System",
+      liveUrl: "https://pratham-hms.vercel.app/",
       features: [
         "Admin, Doctor, and Patient workflows",
         "Appointment scheduling",
@@ -284,6 +284,7 @@ export const portfolio = {
         "JWT authentication",
         "Role-based access control",
       ],
+      gallery: ["/images/projects/pratham-ai/dashboard.png"],
     },
     {
       slug: "dynamic-english-school",
