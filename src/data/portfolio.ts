@@ -14,7 +14,7 @@ export const portfolio = {
     college: "Ajay Kumar Garg Engineering College",
     degree: "B.Tech in Computer Science and Engineering",
     graduation: "June 2027",
-    image: "/images/profile-placeholder.svg",
+    image: "/images/profile.png",
     email: "vsjee2002@gmail.com",
     phone: "9621281471",
     resume: "/resume.pdf",

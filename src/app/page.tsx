@@ -11,12 +11,21 @@ export default function Home() {
       <section className="hero">
         <div className="shell hero-grid">
           <Reveal className="hero-copy">
-            <div className="eyebrow">
-              FULL-STACK DEVELOPER / AI PRODUCT BUILDER
+            <div className="hero-kicker">
+              <span className="hero-kicker-dot" />
+              <span>01 / Introduction</span>
+              <span>Full-stack developer · AI product builder</span>
             </div>
             <p className="hero-greeting">Hello, I&apos;m</p>
-            <h1>{portfolio.profile.name}</h1>
-            <h2>Building useful software with code and AI.</h2>
+            <h1>
+              <span>Vishal</span>
+              <span className="hero-name-accent">Srivastava</span>
+            </h1>
+            <h2>
+              Building useful
+              <br />
+              software <em>with code &amp; AI.</em>
+            </h2>
             <p className="hero-lead">
               I&apos;m a Computer Science Engineering student passionate about
               full-stack development, intelligent applications, and building
@@ -50,16 +59,24 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal className="portrait-stage" delay={0.15}>
+            <div className="portrait-topline">
+              <span>DEVELOPER</span>
+              <span className="portrait-live"><i /> Online</span>
+            </div>
             <img
               className="portrait"
               src={portfolio.profile.image}
-              alt={`${portfolio.profile.name} portrait placeholder`}
+              alt={`${portfolio.profile.name} portrait`}
             />
-            <span className="portrait-caption">PORTRAIT / PLACEHOLDER</span>
+            <div className="portrait-orbit orbit-one" />
+            <div className="portrait-orbit orbit-two" />
+            <div className="portrait-mark">VS</div>
+            <div className="portrait-side-label">AI / FULL-STACK / 2026</div>
+            <span className="portrait-caption">VISHAL SRIVASTAVA</span>
           </Reveal>
         </div>
         <div className="shell hero-meta">
-          <span>Based in India</span>
+          <span>Delhi NCR</span>
           <span>B.Tech Computer Science Engineering</span>
           <span>Interested in AI &amp; Backend Engineering</span>
         </div>

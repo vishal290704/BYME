@@ -1,20 +1,14 @@
 "use client";
 import Link from "next/link";
-import { Menu, Moon, Sun, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
 import { portfolio } from "@/data/portfolio";
 
 export function SiteHeader() {
   const path = usePathname();
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
     window.addEventListener("scroll", onScroll);
@@ -43,22 +37,6 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="nav-actions">
-          <button
-            className="icon-button"
-            aria-label="Toggle theme"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            disabled={!mounted}
-          >
-            {mounted ? (
-              theme === "dark" ? (
-                <Sun size={16} />
-              ) : (
-                <Moon size={16} />
-              )
-            ) : (
-              <span aria-hidden="true" style={{ width: 16, height: 16 }} />
-            )}
-          </button>
           <a className="resume-link" href={portfolio.profile.resume} download>
             Resume ↗
           </a>
