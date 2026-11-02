@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight, Github, Linkedin } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 import { Reveal } from "@/components/reveal";
@@ -63,10 +64,13 @@ export default function Home() {
               <span>DEVELOPER</span>
               <span className="portrait-live"><i /> Online</span>
             </div>
-            <img
+            <Image
               className="portrait"
               src={portfolio.profile.image}
               alt={`${portfolio.profile.name} portrait`}
+              fill
+              priority
+              sizes="(max-width: 800px) 78vw, 430px"
             />
             <div className="portrait-orbit orbit-one" />
             <div className="portrait-orbit orbit-two" />
