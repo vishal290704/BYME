@@ -54,6 +54,16 @@ export default function About() {
                     <br />
                     {item.detail}
                   </small>
+                  {item.href && (
+                    <a
+                      className="stat-link"
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <div className="marginal">View certificate</div>
+                    </a>
+                  )}
                 </div>
               ))}
             </div>

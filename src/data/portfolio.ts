@@ -152,6 +152,7 @@ export const portfolio = {
       value: "Java",
       label: "DSA certification",
       detail: "Udemy · 2025",
+      href: "https://drive.google.com/file/d/1G76jxpGdq80Rdn4e3QZGavQ6kkPrMyY6/view?usp=sharing",
     },
   ],
   experience: [
